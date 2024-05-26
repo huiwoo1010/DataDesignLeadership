@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Marker</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            background-color: #42486A;
+            color: #333; /* Ensure text is readable inside the white container */
+        }
+        .header {
+            text-align: center;
+            margin:20px;
+            width: 90%;
+            background-color: #f0f0f0;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .title {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .description {
+            text-align: left;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+        .container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            width: 80%;
+        }
+        .image {
+            display: block;
+            width: 100%; /* Adjust the width as needed */
+            height: auto; /* Maintains the aspect ratio */
+        }
+        .marker {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="title">쓰레기통 배치 추천 지도</div> <!-- Title above the image -->
+    <div class="description">
+        축제 기간 동안 늘어나는 쓰레기 양에 비해 쓰레기통의 수가 부족하고, 사람이 많은 장소와 동선을 고려해 쓰레기통을 배치할 필요성을 느꼈습니다.
+        이 프로그램은 축제 당시 측정된 데이터를 통해 인구 밀집도를 고려한 최적의 쓰레기통의 배치를 보여줍니다. (by 베리타스 강좌:데이터로 디자인하는 리더십 오로라 조)
+    </div> <!-- Description above the image -->
+</div>
+
+<div class="container">
+    <img src="mapimg.jpg" alt="Sample Image" class="image">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
